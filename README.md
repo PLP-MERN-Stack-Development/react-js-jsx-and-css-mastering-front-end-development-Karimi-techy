@@ -1,73 +1,229 @@
-# Welcome to your Lovable project
+# React Task Manager & API Explorer
 
-## Project info
+A modern, responsive React application demonstrating component architecture, state management, API integration, and beautiful Tailwind CSS styling with dark/light mode support.
 
-**URL**: https://lovable.dev/projects/b416f58e-68cb-4c53-8402-81ed942d044d
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-5-purple)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-cyan)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-## How can I edit this code?
+## 📋 Project Overview
 
-There are several ways of editing your application.
+This project is a comprehensive React application built with Vite that showcases modern web development practices. It features a task management system with local storage persistence, API data fetching with pagination and search, and a responsive design that adapts seamlessly across devices.
 
-**Use Lovable**
+## ✨ Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b416f58e-68cb-4c53-8402-81ed942d044d) and start prompting.
+- **Task Management System**
+  - Create, complete, and delete tasks
+  - Filter tasks by status (All, Active, Completed)
+  - Persistent storage using localStorage
+  - Real-time task statistics
 
-Changes made via Lovable will be committed automatically to this repo.
+- **API Data Integration**
+  - Fetch data from JSONPlaceholder API
+  - Search functionality to filter posts
+  - Pagination with dynamic page numbers
+  - Loading and error state handling
 
-**Use your preferred IDE**
+- **Theme System**
+  - Light and dark mode toggle
+  - Persistent theme preference
+  - Smooth transitions between themes
+  - System preference detection
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Responsive Design**
+  - Mobile-first approach
+  - Adaptive layouts for all screen sizes
+  - Touch-friendly interactions
+  - Optimized for tablets and desktops
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Modern UI/UX**
+  - Clean, professional design
+  - Smooth animations and transitions
+  - Intuitive navigation
+  - Accessibility-focused components
 
-Follow these steps:
+## 🛠 Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Frontend Framework:** React 18
+- **Build Tool:** Vite 5
+- **Styling:** Tailwind CSS 3
+- **Routing:** React Router DOM 6
+- **State Management:** React Hooks + Context API
+- **Icons:** Lucide React
+- **Notifications:** Sonner
+- **HTTP Client:** Fetch API
+- **Type Safety:** TypeScript (optional)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 📁 Folder Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/
+│   ├── Button.jsx          # Reusable button with variants
+│   ├── Card.jsx            # Card component for content display
+│   ├── Navbar.jsx          # Navigation with theme toggle
+│   ├── Footer.jsx          # Footer with social links
+│   └── Layout.jsx          # Layout wrapper component
+├── pages/
+│   ├── Home.jsx            # Landing page with features
+│   ├── Tasks.jsx           # Task management interface
+│   └── ApiData.jsx         # API data explorer with search
+├── hooks/
+│   └── useLocalStorage.js  # Custom hook for localStorage
+├── context/
+│   └── ThemeContext.jsx    # Theme provider and context
+├── utils/
+│   └── api.js              # API utility functions
+├── assets/
+│   └── hero-image.jpg      # Hero section image
+├── App.tsx                 # Main app component with routing
+├── main.tsx                # Application entry point
+└── index.css               # Global styles and design tokens
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Installation
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js (v16 or higher)
+- npm or yarn
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Setup Steps
 
-## What technologies are used for this project?
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd react-task-api-app
+   ```
 
-This project is built with:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
 
-## How can I deploy this project?
+4. **Open your browser**
+   Navigate to `http://localhost:8080`
 
-Simply open [Lovable](https://lovable.dev/projects/b416f58e-68cb-4c53-8402-81ed942d044d) and click on Share -> Publish.
+## 📦 Available Scripts
 
-## Can I connect a custom domain to my Lovable project?
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run preview  # Preview production build
+npm run lint     # Run ESLint
+```
 
-Yes, you can!
+## 📸 Screenshots
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Homepage
+![Homepage Screenshot](./screenshots/homepage.png)
+*Modern landing page with hero section and feature cards*
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Task Manager
+![Tasks Screenshot](./screenshots/tasks.png)
+*Full-featured task management with filtering and statistics*
+
+### API Data Explorer
+![API Screenshot](./screenshots/api.png)
+*API data display with search and pagination*
+
+## 🎨 Design System
+
+The application uses a comprehensive design system with semantic tokens:
+
+- **Colors:** HSL-based color palette with light/dark variants
+- **Typography:** System font stack with responsive sizing
+- **Spacing:** Consistent spacing scale
+- **Shadows:** Layered shadow system
+- **Animations:** Smooth transitions and micro-interactions
+
+## 🌐 API Integration
+
+The app integrates with [JSONPlaceholder](https://jsonplaceholder.typicode.com/), a free fake REST API for testing and prototyping.
+
+**Endpoints used:**
+- `GET /posts` - Fetch all posts
+
+**Features:**
+- Error handling with user-friendly messages
+- Loading states with spinners
+- Search and filter functionality
+- Client-side pagination
+
+## 📱 Responsive Design
+
+Breakpoints:
+- **Mobile:** < 768px
+- **Tablet:** 768px - 1024px
+- **Desktop:** > 1024px
+
+All components are fully responsive and tested across devices.
+
+## 🎯 Key Learnings
+
+This project demonstrates:
+- Component composition and reusability
+- State management with hooks and Context API
+- Custom hooks for cross-cutting concerns
+- API integration with error handling
+- Local storage for data persistence
+- Theme implementation with CSS variables
+- Responsive design with Tailwind CSS
+- Clean code architecture and file organization
+
+## 🚀 Deployment
+
+### Deploy to Vercel
+
+1. Push your code to GitHub
+2. Import project in Vercel
+3. Deploy with default settings
+
+### Deploy to Netlify
+
+1. Run `npm run build`
+2. Drag the `dist` folder to Netlify
+3. Configure redirects for SPA routing
+
+**Live Demo:** [View on Vercel](https://your-app.vercel.app)
+
+## 👤 Author
+
+**Jackline Karimi**
+
+- Portfolio: [Your Portfolio URL]
+- GitHub: [@yourhandle](https://github.com/yourhandle)
+- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- Email: jackline@example.com
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+⭐ If you found this project helpful, please give it a star!
